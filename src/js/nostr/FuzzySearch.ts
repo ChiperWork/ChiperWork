@@ -1,0 +1,38 @@
+import Fuse from 'fuse.js';
+import throttle from 'lodash/throttle';
+
+import localState from '../state/LocalState.ts';
+
+const options = {
+  keys: ['name', 'display_name'],
+  includeScore: true,
+  includeMatches: true,
+  threshold: 0.3,
+};
+
+const notifyUpdate = throttle(() => {
+  localState.get('searchIndexUpdated').put(true);
+}, 2000);
+
+const FuzzySearch = {
+  index: new Fuse([] as any[], options),
+  keys: new Set<string>(),
+  add(doc: any) {
+    if (this.keys.has(doc.key)) {
+      return;
+    }
+    this.keys.add(doc.key);
+    this.index.add(doc);
+    notifyUpdate();
+  },
+  remove(key: string) {
+    this.keys.delete(key);
+    this.index.remove((doc) => doc.key === key);
+    notifyUpdate();
+  },
+  search(query: string) {
+    return this.index.search(query);
+  },
+};
+
+export default FuzzySearch;

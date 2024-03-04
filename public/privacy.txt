@@ -1,0 +1,14 @@
+Política de Privacidade da ChiperWork
+
+Por padrão, o aplicativo se conecta a uma série de relays na rede Nostr para enviar e receber mensagens. Os relays não são operados pelos desenvolvedores da ChiperWork. Você pode alterar os relays padrão conforme desejar.
+
+No Nostr, as mensagens privadas são criptografadas, mas qualquer pessoa pode ver com quem você está conversando e quando.
+
+O aplicativo envolve a aplicação web em (em breve (site aqui)). O provedor de hospedagem registra os endereços IP dos usuários e contagens de visualizações de páginas, que são usados para acompanhar a contagem de usuários únicos e o uso por país.
+
+Os usuários da ChiperWork podem registrar um nome de usuário opcional que redireciona para seu perfil público no Nostr em (https://chipertowork.com/username (dominio será alterado)). Nesse processo, o endereço IP do usuário e o código do país são salvos.
+
+Do contrário, os desenvolvedores da ChiperWork não coletam nenhuma informação sobre você ou seu uso do aplicativo.
+
+Reservamos o direito de modificar esta Política de Privacidade a qualquer momento e sem aviso prévio. Seu uso contínuo do aplicativo após a publicação de qualquer Política de Privacidade modificada indica sua aceitação dos termos da Política de Privacidade modificada.
+Se você tiver alguma dúvida sobre esta Política de Privacidade, entre em contato conosco pelo e-mail (será alterado) sirius@chipertowork.com.
